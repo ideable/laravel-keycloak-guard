@@ -3,15 +3,48 @@
 </p>
 <p align="center">
 &nbsp;
-        <img src="https://img.shields.io/packagist/v/robsontenorio/laravel-keycloak-guard.svg" />
-        <img src="https://img.shields.io/packagist/dt/robsontenorio/laravel-keycloak-guard.svg" />
-      <img src="https://codecov.io/gh/robsontenorio/laravel-keycloak-guard/branch/master/graph/badge.svg?token=8ZpDarpss1"/>
+        <img src="https://img.shields.io/packagist/v/ideable/laravel-keycloak-guard.svg" />
+        <img src="https://img.shields.io/packagist/dt/ideable/laravel-keycloak-guard.svg" />
 
 </p>
 
 # Simple Keycloak Guard for Laravel
 
 This package helps you authenticate users on a Laravel API based on JWT tokens generated from **Keycloak Server**.
+
+## Project status
+
+This repository is the Ideable-maintained fork of the original `robsontenorio/laravel-keycloak-guard`.
+
+The immediate reason for maintaining the fork is to keep Laravel API projects on a supported dependency line and remove the legacy `firebase/php-jwt` constraint that pinned consumers to a vulnerable major version.
+
+The goal of this fork is conservative maintenance:
+
+- keep the existing Laravel integration contract stable
+- publish compatible releases from the `ideable` namespace
+- validate the package against modern PHP and Laravel versions
+
+## What changed in the Ideable fork
+
+- Composer package renamed to `ideable/laravel-keycloak-guard`
+- JWT dependency moved to `firebase/php-jwt ^7.0`
+- package support aligned with current Laravel projects on `php ^8.2`
+- fork-owned releases and CI replace the unmaintained upstream delivery path
+
+## Adoption in existing projects
+
+Install the Ideable fork:
+
+```bash
+composer require ideable/laravel-keycloak-guard
+```
+
+The runtime contract is intentionally unchanged:
+
+- keep using the `keycloak` auth driver
+- keep using the `KeycloakGuard\\...` namespace
+- keep using the same `config/keycloak.php` options
+- keep protecting routes with `auth:api`
 
 # Requirements
 
@@ -59,7 +92,7 @@ This package helps you authenticate users on a Laravel API based on JWT tokens g
 Require the package
 
 ```
-composer require robsontenorio/laravel-keycloak-guard
+composer require ideable/laravel-keycloak-guard
 ```
 
 **If you are using Lumen**, register the provider in your boostrap app file `bootstrap/app.php`.  
@@ -387,4 +420,4 @@ composer test:coverage
 
 # Contact
 
-Twitter [@robsontenorio](https://twitter.com/robsontenorio)
+Please use the GitHub issues tracker in this repository for maintenance and support of the Ideable fork.
