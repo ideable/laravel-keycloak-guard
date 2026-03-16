@@ -1,7 +1,4 @@
 <p align="center">
-  <img src="bird.png">
-</p>
-<p align="center">
 &nbsp;
         <img src="https://img.shields.io/packagist/v/ideable/laravel-keycloak-guard.svg" />
         <img src="https://img.shields.io/packagist/dt/ideable/laravel-keycloak-guard.svg" />
@@ -15,6 +12,10 @@ This package helps you authenticate users on a Laravel API based on JWT tokens g
 ## Project status
 
 This repository is the Ideable-maintained fork of the original `robsontenorio/laravel-keycloak-guard`.
+
+This fork exists because the original package stopped providing a practical maintenance path for current Laravel projects. The upstream package remained pinned to a vulnerable `firebase/php-jwt` major version, and there was no timely response or release path to unblock consumers that needed to update securely.
+
+Given that situation, Ideable resumed maintenance from a public fork so projects depending on this guard can keep moving without rewriting their Keycloak integration.
 
 The immediate reason for maintaining the fork is to keep Laravel API projects on a supported dependency line and remove the legacy `firebase/php-jwt` constraint that pinned consumers to a vulnerable major version.
 
