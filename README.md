@@ -29,7 +29,7 @@ The goal of this fork is conservative maintenance:
 
 - Composer package renamed to `ideable/laravel-keycloak-guard`
 - JWT dependency moved to `firebase/php-jwt ^7.0`
-- package support aligned with current Laravel projects on `php ^8.2`
+- package support aligned with current Laravel projects on `php ^8.3`
 - fork-owned releases and CI replace the unmaintained upstream delivery path
 
 ## Adoption in existing projects
