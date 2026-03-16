@@ -34,11 +34,26 @@ The goal of this fork is conservative maintenance:
 
 ## Adoption in existing projects
 
-Install the Ideable fork:
+For a new install:
 
 ```bash
 composer require ideable/laravel-keycloak-guard
 ```
+
+To replace the unmaintained upstream package in an existing project:
+
+```bash
+composer remove robsontenorio/laravel-keycloak-guard
+composer require ideable/laravel-keycloak-guard:^1.6.4
+```
+
+If your lock file still keeps old transitive constraints around, run:
+
+```bash
+composer update ideable/laravel-keycloak-guard firebase/php-jwt --with-all-dependencies
+```
+
+After the replacement, you should not need to change application code or Laravel auth configuration.
 
 The runtime contract is intentionally unchanged:
 
